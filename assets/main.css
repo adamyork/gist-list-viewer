@@ -1,0 +1,14 @@
+.gistDesc {
+	background-color: #CCCCCC;
+	color:#6495ED;
+	margin-left:0px;
+}
+
+.gistLine {
+	background-color: #FFFFFF;
+	margin-left:10px;
+}
+
+.keywordSpan {
+	color: #9370DB;
+}

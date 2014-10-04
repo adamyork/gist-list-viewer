@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Gist List Viewer</string>
+    <string name="title_activity_view_gist_list">ViewGistListActivity</string>
+    <string name="title_activity_splash">GistListViewer</string>
+    <string name="title_activity_set_git_user">Enter the name of the user you would like to view the Gists of.</string>
+    <string name="viewing_label">Viewing gists for </string>
+    <string name="change_user_button_label">Change</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="save_buttton_hint">Save the Github user.</string>
+    <string name="git_hub_user_input_hint">Github user</string>
+    <string name="save_button_text">Save</string>
+    <string name="progress_bar_label">Loading Gist List</string>
+
+</resources>

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <title>Test</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+        <script type="text/javascript">
+            function addAGist(gist){
+                $.get(gist.raw_url,function(data){
+                    var lines = data.split("\n");
+                    $('body').append('<div id="'+gist.id+'"><div class="gistDesc">'+gist.description+'</div></div>');
+                    for(var line in lines) {
+                        var newLine = lines[line].replace(/\t/g, "&nbsp;&nbsp;&nbsp;&nbsp;");
+                        newLine = newLine.replace(/^\s+/, function(m){ return m.replace(/\s/g, '&nbsp;');})
+                        newLine = newLine.replace(/var/g,'<span class="keywordSpan">var</span>');
+                        newLine = newLine.replace(/if/g,'<span class="keywordSpan">if</span>');
+                        newLine = newLine.replace(/then/g,'<span class="keywordSpan">then</span>');
+                        newLine = newLine.replace(/while/g,'<span class="keywordSpan">while</span>');
+                        newLine = newLine.replace(/for/g,'<span class="keywordSpan">for</span>');
+                        newLine = newLine.replace(/\bin\b/g,'<span class="keywordSpan">in</span>');
+                        newLine = newLine.replace(/\bis\b/g,'<span class="keywordSpan">is</span>');
+                        newLine = newLine.replace(/&&/g,'<span class="keywordSpan">&&</span>');
+                        $("#"+gist.id).append('<div class="gistLine">'+newLine+'</div>');
+                    }
+                });
+            }
+        </script>
+    </head>
+    <body>
+    </body>
+</HTML>
